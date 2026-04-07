@@ -297,14 +297,30 @@ export default function AddFilamentForm() {
           <>
             <div>
               <label className={labelCls}>{t.form.filamentName}</label>
-              <input
-                type="text"
-                value={form.filamentName}
-                onChange={e => update('filamentName', e.target.value)}
-                placeholder="PLA {color_name}"
-                className={inputCls}
-              />
-              <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">{t.form.filamentNameHint}</p>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={form.filamentName}
+                  onChange={e => update('filamentName', e.target.value)}
+                  placeholder="PLA {color_name}"
+                  className={inputCls}
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    const pos = form.filamentName.indexOf('{color_name}')
+                    if (pos >= 0) {
+                      update('filamentName', form.filamentName.replace('{color_name}', ''))
+                    } else {
+                      update('filamentName', form.filamentName + '{color_name}')
+                    }
+                  }}
+                  className="px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors whitespace-nowrap"
+                  title={t.form.filamentNameHint}
+                >
+                  {form.filamentName.includes('{color_name}') ? '✓ {color_name}' : '+ {color_name}'}
+                </button>
+              </div>
               {errors.filamentName && <p className={errorCls}>{errors.filamentName}</p>}
             </div>
 
@@ -365,25 +381,25 @@ export default function AddFilamentForm() {
               <label className={labelCls}>{t.form.weights}</label>
               <div className="space-y-2">
                 {form.weights.map((w, i) => (
-                  <div key={i} className="flex gap-2 items-start">
+                  <div key={i} className="grid grid-cols-[2fr_1fr_1fr_auto] gap-2 items-start">
                     <input
                       type="number"
                       value={w.weight}
                       onChange={e => updateWeight(i, 'weight', e.target.value)}
                       placeholder={t.form.weight}
-                      className={`${inputCls} flex-1 min-w-0`}
+                      className={inputCls}
                     />
                     <input
                       type="number"
                       value={w.spool_weight}
                       onChange={e => updateWeight(i, 'spool_weight', e.target.value)}
                       placeholder={t.form.spoolWeight}
-                      className={`${inputCls} w-24`}
+                      className={inputCls}
                     />
                     <select
                       value={w.spool_type || ''}
                       onChange={e => updateWeight(i, 'spool_type', (e.target.value || null) as SpoolType)}
-                      className={`${selectCls} w-24`}
+                      className={selectCls}
                     >
                       <option value="">{t.form.spoolType}</option>
                       <option value="plastic">{t.form.spoolTypePlastic}</option>
