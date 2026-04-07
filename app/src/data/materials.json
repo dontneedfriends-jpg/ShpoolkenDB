@@ -1,0 +1,140 @@
+[
+    {
+        "material": "PLA",
+        "density": 1.24,
+        "extruder_temp": 210,
+        "bed_temp": 50
+    },
+    {
+        "material": "PLA+",
+        "density": 1.24,
+        "extruder_temp": 210,
+        "bed_temp": 60
+    },
+    {
+        "material": "ABS",
+        "density": 1.04
+    },
+    {
+        "material": "PETG",
+        "density": 1.27
+    },
+    {
+        "material": "Nylon",
+        "density": 1.52
+    },
+    {
+        "material": "Flexible (TPU)",
+        "density": 1.21
+    },
+    {
+        "material": "Polycarbonate (PC)",
+        "density": 1.3
+    },
+    {
+        "material": "Wood",
+        "density": 1.28
+    },
+    {
+        "material": "Carbon Fiber",
+        "density": 1.3
+    },
+    {
+        "material": "PC/ABS",
+        "density": 1.19
+    },
+    {
+        "material": "PC/PBT",
+        "density": 1.2
+    },
+    {
+        "material": "PCTG",
+        "density": 1.21
+    },
+    {
+        "material": "HIPS",
+        "density": 1.03
+    },
+    {
+        "material": "PVA",
+        "density": 1.23
+    },
+    {
+        "material": "ASA",
+        "density": 1.05
+    },
+    {
+        "material": "Polypropylene (PP)",
+        "density": 0.9
+    },
+    {
+        "material": "Acetal (POM)",
+        "density": 1.4
+    },
+    {
+        "material": "PMMA",
+        "density": 1.18
+    },
+    {
+        "material": "Semi flexible (FPE)",
+        "density": 2.16
+    },
+    {
+        "material": "PVDF",
+        "density": 1.78
+    },
+    {
+        "material": "PEI (Ultem)",
+        "density": 1.27
+    },
+    {
+        "material": "PEKK",
+        "density": 1.28
+    },
+    {
+        "material": "PEEK",
+        "density": 1.32
+    },
+    {
+        "material": "PPSU",
+        "density": 1.37
+    },
+    {
+        "material": "ABS+",
+        "density": 1.06,
+        "extruder_temp": 240,
+        "bed_temp": 100
+    },
+    {
+        "material": "BIOFUSION",
+        "density": 1.25
+    },
+    {
+        "material": "GREENTEC",
+        "density": 1.3
+    },
+    {
+        "material": "FLAX",
+        "density": 1.45
+    },
+    {
+        "material": "PEARL",
+        "density": 1.25
+    },
+    {
+        "material": "ABS-T",
+        "density": 1.08
+    },
+    {
+        "material": "Flexible (TPE 32D)",
+        "density": 1.10
+    },
+    {
+        "material": "Flexible (TPE 88A)",
+        "density": 0.89
+    },
+    {
+        "material": "PVB",
+        "density": 1.10
+    }
+]
