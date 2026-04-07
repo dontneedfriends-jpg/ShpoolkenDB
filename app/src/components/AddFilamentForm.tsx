@@ -371,19 +371,19 @@ export default function AddFilamentForm() {
                       value={w.weight}
                       onChange={e => updateWeight(i, 'weight', e.target.value)}
                       placeholder={t.form.weight}
-                      className={`${inputCls} flex-1`}
+                      className={`${inputCls} flex-1 min-w-0`}
                     />
                     <input
                       type="number"
                       value={w.spool_weight}
                       onChange={e => updateWeight(i, 'spool_weight', e.target.value)}
                       placeholder={t.form.spoolWeight}
-                      className={`${inputCls} w-32`}
+                      className={`${inputCls} w-24`}
                     />
                     <select
                       value={w.spool_type || ''}
                       onChange={e => updateWeight(i, 'spool_type', (e.target.value || null) as SpoolType)}
-                      className={`${selectCls} w-28`}
+                      className={`${selectCls} w-24`}
                     >
                       <option value="">{t.form.spoolType}</option>
                       <option value="plastic">{t.form.spoolTypePlastic}</option>
