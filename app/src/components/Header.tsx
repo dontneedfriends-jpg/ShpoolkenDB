@@ -45,6 +45,16 @@ export default function Header() {
             >
               {t.nav.add}
             </Link>
+            <Link
+              to="/about"
+              className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${
+                location.pathname === '/about'
+                  ? 'bg-white dark:bg-gray-700 text-violet-600 dark:text-violet-400 shadow-sm'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+              }`}
+            >
+              {t.nav.about}
+            </Link>
           </nav>
 
           <div className="flex items-center gap-2">

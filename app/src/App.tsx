@@ -4,6 +4,7 @@ import { ThemeProvider } from './hooks/useTheme'
 import Header from './components/Header'
 import FilamentCatalog from './components/FilamentCatalog'
 import AddFilamentForm from './components/AddFilamentForm'
+import About from './components/About'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Routes>
               <Route path="/" element={<FilamentCatalog />} />
               <Route path="/add" element={<AddFilamentForm />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </main>
           <footer className="border-t border-gray-200 dark:border-gray-800 py-6 mt-auto">

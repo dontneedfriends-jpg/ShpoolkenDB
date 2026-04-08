@@ -6,6 +6,7 @@ export const en = {
   nav: {
     catalog: 'Catalog',
     add: 'Add filament',
+    about: 'About',
   },
   catalog: {
     title: 'Filament catalog',
@@ -103,5 +104,20 @@ export const en = {
   lang: {
     ru: 'RU',
     en: 'EN',
+  },
+  about: {
+    title: 'About',
+    p1: 'ShpoolkenDB is a filament database for 3D printing that exists because someone got tired of waiting for updates in the original project.',
+    problemTitle: 'The Problem',
+    problem: 'The original SpoolmanDB is a great idea, but the maintenance is... lacking. PRs sit for months, new filaments aren\'t added, and nobody answers questions.',
+    solutionTitle: 'The Solution',
+    solution: 'We forked it and started actually maintaining it. New filaments? Added. PRs? Reviewed. Issues? Responded to. Revolution? No. Just a working database.',
+    statsTitle: 'Stats',
+    manufacturers: 'Manufacturers',
+    filaments: 'Filaments',
+    prs: 'Stuck PRs',
+    techTitle: 'Tech Stack',
+    tech: 'React + Tailwind frontend, hosted on GitHub Pages. The database is just JSON files that get compiled into a single filaments.json on deploy.',
+    license: 'License: GPL-3.0. Made with ☕ and sleep deprivation.',
   },
 }
