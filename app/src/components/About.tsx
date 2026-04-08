@@ -37,7 +37,7 @@ export default function About() {
             <div className="text-sm">{t.about.manufacturers}</div>
           </div>
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-violet-600 dark:text-violet-400">4000+</div>
+            <div className="text-2xl font-bold text-violet-600 dark:text-violet-400">7000+</div>
             <div className="text-sm">{t.about.filaments}</div>
           </div>
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">

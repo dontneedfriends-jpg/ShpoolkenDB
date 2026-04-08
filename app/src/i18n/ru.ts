@@ -115,7 +115,7 @@ export const ru = {
     statsTitle: 'Статистика',
     manufacturers: 'Производителей',
     filaments: 'Филаментов',
-    prs: 'Застрявших PR',
+    prs: 'Застрявших PR из SpoolmanDB',
     printpalTitle: 'А что с PrintPAL?',
     printpal: 'ShpoolkenDB также является официальной базой филаментов для проекта PrintPAL — системы управления 3D-печатью с поддержкой OctoPrint и Mainsail.',
     printpalNote: 'P.S. Автор не любит Docker и приложения на нём. Никаких контейнеров. Только чистый Python.',
