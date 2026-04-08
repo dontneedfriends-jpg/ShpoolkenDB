@@ -1,0 +1,34 @@
+Title: "Critical Improvements for Validation, Performance, and Security"
+
+Body: "### Priority Improvements:
+
+#### 1. **Validation Improvements:**
+- Add check for duplicate filament `id` before compiling in `compile_filaments.py`.
+- Suggested fix: Use code to detect duplicates with Python or a bash script.
+
+#### 2. **Performance Challenges:**
+- Implement client-side `filaments.json` caching with `localStorage` to prevent reloading data each time.
+- Split `filaments.json` into smaller files by manufacturer to improve load times.
+
+#### 3. **Form Validation Issues:**
+- Add regex validation for `hex` fields in `AddFilamentForm.tsx`.
+- Display detailed error messages when the form submission fails.
+
+#### 4. **Security:**
+- Ensure user inputs (like manufacturer names) are sanitized before being used.
+
+#### 5. **CI/CD Expansion:**
+- Create integration tests to validate `filaments.json` and `materials.json` relationships.
+
+---
+
+### Additional Details:
+We detected missing validation hooks, incomplete error handling, and potential data integrity risks. The issue aims to:
+- Simplify user workflows.
+- Secure data integrity.
+- Optimize API and data loading processes in the app.
+
+**Key Suggested Fixes and Code Ready for Integration:**
+* Sanitize strings when building data objects.
+* Integrate client-side logic for handling cached JSON.
+* Pre-compilation validation scripts for CI/CD pipelines and contributor local systems."
