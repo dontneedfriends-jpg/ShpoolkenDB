@@ -38,6 +38,10 @@ interface FormData {
   glow: boolean
 }
 
+function sanitizeString(str: string): string {
+  return str.replace(/[<>&"']/g, '')
+}
+
 function createInitialForm(): FormData {
   return {
     manufacturer: '',
@@ -151,7 +155,7 @@ export default function AddFilamentForm() {
       const validColors = form.colors.filter(c => c.name.trim() && c.hex.trim())
       if (validColors.length === 0) errs.colors = t.form.atLeastOneColor
       form.colors.forEach((c, i) => {
-        if (c.hex && !/^([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(c.hex.trim())) {
+        if (c.hex && !/^[0-9a-fA-F]{6}$/.test(c.hex.trim())) {
           errs[`color_${i}`] = t.form.invalidHex
         }
       })
@@ -215,7 +219,7 @@ export default function AddFilamentForm() {
 
   const handleSubmit = useCallback(() => {
     const json = buildJson()
-    const mfr = form.isNewManufacturer ? form.newManufacturerName.trim() : form.manufacturer
+    const mfr = sanitizeString(form.isNewManufacturer ? form.newManufacturerName.trim() : form.manufacturer)
     const url = generateIssueUrl(json, mfr)
     window.open(url, '_blank')
   }, [buildJson, form])
