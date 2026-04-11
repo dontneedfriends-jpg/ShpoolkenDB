@@ -1,0 +1,462 @@
+{
+  "manufacturer": "Filamentarno",
+  "filaments": [
+    {
+      "name": "ABS GF-4 {color_name}",
+      "material": "ABS",
+      "density": 1.04,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        },
+        {
+          "weight": 2250,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Рубиновый",
+          "hex": "9B111E"
+        },
+        {
+          "name": "Чёрный",
+          "hex": "000000"
+        },
+        {
+          "name": "Белый",
+          "hex": "FFFFFF"
+        },
+        {
+          "name": "Натуральный",
+          "hex": "F5F5DC"
+        },
+        {
+          "name": "Хаки",
+          "hex": "C3B091"
+        },
+        {
+          "name": "Фуксия",
+          "hex": "FF00FF"
+        },
+        {
+          "name": "Серый",
+          "hex": "808080"
+        },
+        {
+          "name": "Жёлтый",
+          "hex": "FFFF00"
+        },
+        {
+          "name": "Красный",
+          "hex": "FF0000"
+        },
+        {
+          "name": "Синий",
+          "hex": "0000FF"
+        },
+        {
+          "name": "Зелёный",
+          "hex": "00CD00"
+        },
+        {
+          "name": "Оранжевый",
+          "hex": "FFA500"
+        },
+        {
+          "name": "Черный",
+          "hex": "000000"
+        },
+        {
+          "name": "Зеленый",
+          "hex": "00CD00"
+        }
+      ],
+      "extruder_temp": 250,
+      "extruder_temp_range": [
+        230,
+        270
+      ],
+      "bed_temp": 90,
+      "bed_temp_range": [
+        80,
+        110
+      ]
+    },
+    {
+      "name": "TITAN GF-12 {color_name}",
+      "material": "TITAN",
+      "density": 1.21,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        },
+        {
+          "weight": 2250,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Натуральный",
+          "hex": "F5F5DC"
+        },
+        {
+          "name": "Чёрный",
+          "hex": "000000"
+        },
+        {
+          "name": "Оранжевый",
+          "hex": "FFA500"
+        },
+        {
+          "name": "Красный",
+          "hex": "FF0000"
+        }
+      ],
+      "extruder_temp": 240,
+      "extruder_temp_range": [
+        230,
+        260
+      ],
+      "bed_temp": 70,
+      "bed_temp_range": [
+        60,
+        80
+      ]
+    },
+    {
+      "name": "TOTAL GF-30 {color_name}",
+      "material": "TOTAL",
+      "density": 1.21,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        },
+        {
+          "weight": 2250,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Чёрный",
+          "hex": "000000"
+        },
+        {
+          "name": "Натуральный",
+          "hex": "F5F5DC"
+        },
+        {
+          "name": "Серый",
+          "hex": "808080"
+        },
+        {
+          "name": "Черный",
+          "hex": "000000"
+        }
+      ],
+      "extruder_temp": 240,
+      "extruder_temp_range": [
+        230,
+        260
+      ],
+      "bed_temp": 70,
+      "bed_temp_range": [
+        60,
+        80
+      ]
+    },
+    {
+      "name": "TPU A95 {color_name}",
+      "material": "TPU",
+      "density": 1.21,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Натуральный",
+          "hex": "F5F5DC"
+        },
+        {
+          "name": "Чёрный",
+          "hex": "000000"
+        },
+        {
+          "name": "Красный",
+          "hex": "FF0000"
+        },
+        {
+          "name": "Белый",
+          "hex": "FFFFFF"
+        }
+      ],
+      "extruder_temp": 220,
+      "extruder_temp_range": [
+        200,
+        240
+      ],
+      "bed_temp": 50,
+      "bed_temp_range": [
+        40,
+        60
+      ]
+    },
+    {
+      "name": "PETg Standart {color_name}",
+      "material": "PETG",
+      "density": 1.27,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        },
+        {
+          "weight": 2250,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Чёрный",
+          "hex": "000000"
+        },
+        {
+          "name": "Бирюзовый",
+          "hex": "00FFFF"
+        },
+        {
+          "name": "Синий",
+          "hex": "0000FF"
+        },
+        {
+          "name": "Хаки",
+          "hex": "C3B091"
+        },
+        {
+          "name": "Розовый",
+          "hex": "FFC0CB"
+        },
+        {
+          "name": "Красный",
+          "hex": "FF0000"
+        },
+        {
+          "name": "Фиолетовый",
+          "hex": "EE82EE"
+        },
+        {
+          "name": "Зеленый",
+          "hex": "00CD00"
+        },
+        {
+          "name": "Белый",
+          "hex": "FFFFFF"
+        },
+        {
+          "name": "Жёлтый",
+          "hex": "FFFF00"
+        },
+        {
+          "name": "Прозрачный",
+          "hex": "E0E0E0"
+        },
+        {
+          "name": "Зелёный",
+          "hex": "00CD00"
+        }
+      ],
+      "extruder_temp": 240,
+      "extruder_temp_range": [
+        230,
+        260
+      ],
+      "bed_temp": 70,
+      "bed_temp_range": [
+        60,
+        80
+      ]
+    },
+    {
+      "name": "PLA+ Standart {color_name}",
+      "material": "PLA",
+      "density": 1.24,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        },
+        {
+          "weight": 2250,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Серый",
+          "hex": "808080"
+        },
+        {
+          "name": "Оранжевый",
+          "hex": "FFA500"
+        },
+        {
+          "name": "Голубой",
+          "hex": "87CEEB"
+        },
+        {
+          "name": "Хаки",
+          "hex": "C3B091"
+        },
+        {
+          "name": "Синий",
+          "hex": "0000FF"
+        },
+        {
+          "name": "Фиолетовый",
+          "hex": "EE82EE"
+        },
+        {
+          "name": "Жёлтый",
+          "hex": "FFFF00"
+        },
+        {
+          "name": "Зелёный",
+          "hex": "00CD00"
+        },
+        {
+          "name": "Чёрный",
+          "hex": "000000"
+        },
+        {
+          "name": "Розовый",
+          "hex": "FFC0CB"
+        },
+        {
+          "name": "Белый",
+          "hex": "FFFFFF"
+        }
+      ],
+      "extruder_temp": 210,
+      "extruder_temp_range": [
+        200,
+        230
+      ],
+      "bed_temp": 60,
+      "bed_temp_range": [
+        50,
+        70
+      ]
+    },
+    {
+      "name": "PA6 {color_name}",
+      "material": "PA",
+      "density": 1.21,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Чёрный",
+          "hex": "000000"
+        },
+        {
+          "name": "Натуральный",
+          "hex": "F5F5DC"
+        },
+        {
+          "name": "Черный",
+          "hex": "000000"
+        }
+      ],
+      "extruder_temp": 260,
+      "extruder_temp_range": [
+        250,
+        280
+      ],
+      "bed_temp": 100,
+      "bed_temp_range": [
+        90,
+        120
+      ]
+    },
+    {
+      "name": "SBS-PRO {color_name}",
+      "material": "SBS",
+      "density": 1.21,
+      "weights": [
+        {
+          "weight": 750,
+          "spool_weight": 200,
+          "spool_type": "plastic"
+        }
+      ],
+      "diameters": [
+        1.75
+      ],
+      "colors": [
+        {
+          "name": "Белый",
+          "hex": "FFFFFF"
+        },
+        {
+          "name": "Серый",
+          "hex": "808080"
+        }
+      ],
+      "extruder_temp": 240,
+      "extruder_temp_range": [
+        230,
+        260
+      ],
+      "bed_temp": 70,
+      "bed_temp_range": [
+        60,
+        80
+      ]
+    }
+  ]
+}
