@@ -79,14 +79,24 @@ def generate_id(
     weight: float,
     diameter: float,
     spool_type: SpoolType | None,
+    color_name: str,
+    color_hex: str | None,
+    color_index: int,
+    color_hex_index: int,
 ) -> str:
     """Generates a unique ID for the given filament data."""
-    # Remove any non-ascii from name
     name = name.encode("ascii", "ignore").decode()
+    color_hex_clean = color_hex.lstrip("#") if color_hex else None
+    
+    if color_hex_clean:
+        color_identifier = f"{color_hex_clean}_{color_hex_index}"
+    else:
+        color_identifier = f"c{color_index}"
+    
     weight_s = f"{weight:.0f}"
     diameter_s = f"{diameter:.2f}".replace(".", "")
     spooltype_s = SPOOL_TYPE_MAP[spool_type]
-    return f"{manufacturer.lower()}_{material.lower()}_{name.lower()}_{weight_s}_{diameter_s}_{spooltype_s}".replace(
+    return f"{manufacturer.lower()}_{material.lower()}_{name.lower()}_{weight_s}_{diameter_s}_{spooltype_s}_{color_identifier}".replace(
         " ", ""
     )
 
@@ -109,6 +119,9 @@ def expand_filament_data(manufacturer: str, data: Filament) -> Iterator[dict]:
     translucent = data.get("translucent", False)
     glow = data.get("glow", False)
 
+    color_index = 0
+    color_hex_index = 0
+    seen_color_hexes = {}
     for weight_obj in weights:
         weight = weight_obj["weight"]
         spool_weight = weight_obj.get("spool_weight", None)
@@ -126,6 +139,16 @@ def expand_filament_data(manufacturer: str, data: Filament) -> Iterator[dict]:
                 color_pattern = color_obj.get("pattern", None)
                 color_translucent = color_obj.get("translucent", None)
                 color_glow = color_obj.get("glow", None)
+                color_index += 1
+                
+                color_hex_clean = color_hex.lstrip("#") if color_hex else None
+                if color_hex_clean:
+                    if color_hex_clean not in seen_color_hexes:
+                        seen_color_hexes[color_hex_clean] = 0
+                    seen_color_hexes[color_hex_clean] += 1
+                    color_hex_index = seen_color_hexes[color_hex_clean]
+                else:
+                    color_hex_index = 0
 
                 if color_finish is None:
                     color_finish = finish
@@ -172,6 +195,10 @@ def expand_filament_data(manufacturer: str, data: Filament) -> Iterator[dict]:
                         weight=weight,
                         diameter=diameter,
                         spool_type=spool_type,
+                        color_name=color_name,
+                        color_hex=color_hex,
+                        color_index=color_index,
+                        color_hex_index=color_hex_index,
                     ),
                     "manufacturer": manufacturer,
                     "name": formatted_name,
@@ -192,6 +219,7 @@ def expand_filament_data(manufacturer: str, data: Filament) -> Iterator[dict]:
                     "pattern": color_pattern,
                     "translucent": color_translucent,
                     "glow": color_glow,
+                    "color_index": color_index,
                 }
 
 
@@ -203,7 +231,7 @@ def get_filaments_from_data(data: dict) -> Iterator[dict]:
 
 def load_json(file: Path) -> dict:
     """A function that loads JSON data from a file and returns it as a dictionary."""
-    with file.open() as f:
+    with file.open(encoding="utf-8") as f:
         return json.load(f)
 
 
